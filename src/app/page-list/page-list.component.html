@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Title</th>
+        <th scope="col">Word Counts</th>
+        <th scope="col">Snippet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let page of pages;let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{page.title}}</td>
+        <td>{{page.wordcount}}</td>
+        <td>{{page.snippet}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
