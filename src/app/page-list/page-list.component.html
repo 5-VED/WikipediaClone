@@ -11,9 +11,9 @@
     <tbody>
       <tr *ngFor="let page of pages;let i = index">
         <th scope="row">{{i+1}}</th>
-        <td>{{page.title}}</td>
+        <td><a style="text-decoration:none;" target="_blank" [href]="'http://en.wikipedia.org?curid=' + page.pageid">{{page.title}}</a></td>
         <td>{{page.wordcount}}</td>
-        <td>{{page.snippet}}</td>
+        <td [innerHTML]="page.snippet">{{page.snippet}}</td>
       </tr>
     </tbody>
   </table>
